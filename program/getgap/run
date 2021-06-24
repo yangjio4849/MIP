@@ -1,0 +1,5 @@
+make clean
+make
+make getgap_simple
+cp getgap getgap_simple ~/bin/
+

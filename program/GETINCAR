@@ -1,0 +1,57 @@
+LDAU=0  ####LDAU=.FALSE.
+LMAXMIX=2  ####default
+num=0
+for line in `sed -n "6,1p" POSCAR`
+do
+num=`echo "${num}+1" | bc`
+    if (grep ${line}" " ~/../jyang/bin/LDAU)
+    then
+    
+      typekey=`grep $line ~/../jyang/bin/LDAU | awk '{print $2}'`
+      LDAUL[$num]=`grep $line ~/../jyang/bin/LDAU | awk '{print $2}'`
+      LDAUU[$num]=`grep $line ~/../jyang/bin/LDAU | awk '{print $3}' `
+      LDAUJ[$num]=`grep $line ~/../jyang/bin/LDAU | awk '{print $4}' `
+       
+      if ((`expr ${LDAU} \=1`))
+      then
+
+        if ((`expr ${LMAXMIX} \=6`))
+        then
+        LMAXMIX=6
+        else
+
+          if ((`expr ${typekey} \= 3`))
+          then
+          LMAXMIX=6
+          else
+          LMAXMIX=4
+          fi
+        fi
+      else
+        if ((`expr ${typekey} \= 3`))
+        then
+        LMAXMIX=6
+        LDAU=1
+        else
+          if ((`expr ${typekey} \= 2`))
+          then
+          LMAXMIX=4
+          LDAU=1
+          fi
+        fi
+      fi   
+    else 
+    LDAUL[$num]=-1
+    LDAUU[$num]=0
+    LDAUJ[$num]=0
+    fi
+done
+
+if ((`expr ${LDAU} \= 1`))
+then
+echo "LDAU=.TRUE." >>INCAR
+echo "LMAXMIX="${LMAXMIX} >>INCAR
+echo "LDAUL"=${LDAUL[*]} >> INCAR
+echo "LDAUU"=${LDAUU[*]} >> INCAR
+echo "LDAUJ"=${LDAUJ[*]} >> INCAR
+fi

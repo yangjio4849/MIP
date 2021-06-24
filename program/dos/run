@@ -1,0 +1,5 @@
+make clean
+make 
+make dospar 
+cp dos dospar ~/bin/
+make clean
