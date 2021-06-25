@@ -17,7 +17,7 @@ There are all programs or scripts which used in high_throuput workflow from test
 
 * [chgsum.pl](./program/chgsum.pl) and [bader](./program/bader) files for bader analysis.
 
-* [dospar](./program/dospar/dospar) for density of states analysis. Compiler:make dospar
+* [dospar](./program/dos/dospar) for density of states analysis. Compiler:make dospar
 
 * [getfulleig](./program/getfulleig.f90) for fermisurface which is in getbxsf folder: Compiler: ifort -o getfulleig getfulleig.f90
 
