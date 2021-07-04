@@ -645,7 +645,7 @@ static=`expr length "$b"`
     if ((${trans} > 0));then
     echo ${T[*]}>transported.txt
     
-    getfulleig
+    # getfulleig
 
     else
     echo ${T[*]}>nontransported.txt

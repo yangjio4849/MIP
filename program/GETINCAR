@@ -4,13 +4,13 @@ num=0
 for line in `sed -n "6,1p" POSCAR`
 do
 num=`echo "${num}+1" | bc`
-    if (grep ${line}" " ~/../jyang/bin/LDAU)
+    if (grep ${line}" " /paht/to/LDAU)
     then
     
-      typekey=`grep $line ~/../jyang/bin/LDAU | awk '{print $2}'`
-      LDAUL[$num]=`grep $line ~/../jyang/bin/LDAU | awk '{print $2}'`
-      LDAUU[$num]=`grep $line ~/../jyang/bin/LDAU | awk '{print $3}' `
-      LDAUJ[$num]=`grep $line ~/../jyang/bin/LDAU | awk '{print $4}' `
+      typekey=`grep $line /paht/to/LDAU | awk '{print $2}'`
+      LDAUL[$num]=`grep $line /paht/to/LDAU | awk '{print $2}'`
+      LDAUU[$num]=`grep $line /paht/to/LDAU | awk '{print $3}' `
+      LDAUJ[$num]=`grep $line /paht/to/LDAU | awk '{print $4}' `
        
       if ((`expr ${LDAU} \=1`))
       then
