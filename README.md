@@ -1,5 +1,8 @@
 # MIP high-throuput workflow scripts
 The script [`run_pbe.lsf`](./run_pbe.lsf) is used for the high-throuput calculation in MIP.
+
+Web page of the database: www.mip3d.org
+
 The workflow of this script is as below:
 
 <div align=center>
