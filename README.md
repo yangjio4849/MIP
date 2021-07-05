@@ -83,7 +83,7 @@ Generate `POTCAR` file. Need to modify the `PAW` file path and `POTCAR folder` p
     `gap.txt` file contans the values and k-points for VBM and CBM. 
 
 ### [dospar](./program/dos/dospar) 
-Density of states (DOS) analysis.
+Density of states (DOS) analysis. The needed file `PROCAR` can be get by add tag '`LORBIT=11`' to `INCAR`.
 - Compiler:
     
     `make dospar`
