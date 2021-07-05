@@ -90,7 +90,7 @@ Density of states (DOS) analysis.
 
 - Input parameters (after running `dospar`, you need to enter some parameters. Here is a running example):
 
-    ```console
+    ```ini
     The energy for zero point is: (# fermi energy)
 
     -1.90
@@ -147,7 +147,7 @@ Density of states (DOS) analysis.
 ### [TransOpt](https://github.com/yangjio4849/TransOpt.git)
  Calculate electrical transport properties. For more infomation to this softerware, please refer to https://github.com/yangjio4849/TransOpt.git
 
-# Use the script.
+# Usage
 
 After ensuring that all the above dependent scripts and programs are available, modify the job management system and the VASP in the script to adapt to your server. Then you can submit the script.
 
