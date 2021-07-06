@@ -125,7 +125,7 @@ done
   elif [ $symbol == I ];then
   typemode="ORCI"
 #echo ${lattice[*]}  # todo
-  elif [ $symbol == C ];then
+  elif [ $symbol == C ] || [  $symbol ==A ] ;then
   typemode="ORCC"
 
 else
